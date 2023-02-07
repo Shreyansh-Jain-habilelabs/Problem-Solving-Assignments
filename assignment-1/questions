@@ -1,0 +1,104 @@
+<!-- 1 -->
+
+Print all primes number between these inputs. 
+
+Take two inputs 
+
+Input1 
+
+Input2 
+
+<!-- 2 -->
+
+Print Fibonacci series till N value. 
+
+<!-- 3 -->
+
+Count digits in Number 
+
+Example:1234=>4. 
+
+<!-- 4 -->
+
+Print Reverse of a number 
+
+Example 1234 
+
+4,3,2,1 
+
+<!-- 5 -->
+
+Rotate a number. 
+
+You are given two number n and k. You are required to rotate n, k times to the right. if k is positive rotate to the right I.e., remove rightmost digit and make it leftmost. Do the reverse for negative value of k. Also, k can have an absolute value larger than number of digits in n. 
+
+Take as input n and k 
+
+Print the rotated number 
+
+N=123456, k=3, result=456123 
+
+<!-- 6 -->
+
+Prime factorization of A Number 
+
+Take as input a number n 
+
+Print all its prime factors from smallest to largest. 
+
+Example: n=1440, result :2 2 2 2 2 3 3 5. 
+
+<!-- 7 -->
+
+Pattern Questions 
+
+<!-- 7.1 -->
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+
+ <!-- 7.2 -->
+
+* * * * * 
+* * * * 
+* * *  
+* * 
+* 
+ 
+<!-- 7.3 -->
+ 
+
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5 
+
+<!-- 7.4 -->
+
+1 2 3 4 5 
+1 2 3 4  
+1 2 3 
+1 2 
+1 
+
+<!-- 7.5 -->
+
+        * 
+      * * * 
+    * * * * * 
+  * * * * * * * 
+* * * * * * * * * 
+
+<!-- 7.6 -->
+
+* * * * * * * * * 
+  * * * * * * * 
+    * * * * * 
+      * * * 
+        * 
+
+ 
