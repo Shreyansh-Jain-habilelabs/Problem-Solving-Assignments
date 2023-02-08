@@ -22,12 +22,15 @@ const printPrimes = (start, end) => {
 
 // function that prints fibonacci series till given n number
 const fibonacci = (n) => {
-  let series = [0, 1];
-  console.log(0);
-  console.log(1);
+  a=0;
+  b=1;
+  console.log(a);
+  console.log(b);
   for (let i = 2; i < n; i++) {
-    series.push(series[i - 1] + series[i - 2]);
-    console.log(series[i - 1] + series[i - 2]);
+    sum = a+b;
+    console.log(sum);
+    a=b;
+    b=sum;
   }
 }
 
@@ -62,35 +65,25 @@ const reverseNumber = (num) => {
 // -------------------------------- Question 5 --------------------------------
 
 const shiftNumber = (number, k) => {
-  let shiftNumber = k;
-  if(shiftNumber === Math.floor(Math.log10(number) + 1)  || (shiftNumber*=-1) === Math.floor(Math.log10(number) + 1) || shiftNumber ===0){
-    return number;
-  }else if (k < 0 && (k*=-1) < Math.floor(Math.log10(number) + 1)) {
-
-    let otherPart, remainingPart;
-    // k *= -1;
-    remainingPart = number % Math.pow(10, k);
-    otherPart = Math.floor(Math.log10(number - remainingPart) + 1 - k);
-    return remainingPart * Math.pow(10, otherPart) + (number - remainingPart) / Math.pow(10, k);
-    
-  }else if (k > 0 && k < Math.floor(Math.log10(number) + 1)) {
-
-    let NumberLength = Math.floor(Math.log10(number) + 1 - k);
-    let otherPart, remainingPart;
-    remainingPart = number % Math.pow(10, NumberLength);
-    otherPart = Math.floor(Math.log10(number - remainingPart) + 1 - NumberLength);
-    return remainingPart * Math.pow(10, otherPart) + (number - remainingPart) / Math.pow(10, NumberLength);
-
+  // let sifted = 
+  
+  if (k >= 0) {
+    while (k > 0){
+      number = number*10;
+      number = number%(Math.pow(10,Math.floor(Math.log10(number)))) + Math.floor(number/(Math.pow(10,Math.floor(Math.log10(number)))));
+      k--;
+    }
+  } else {
+    console.log(`no`);
   }
-  return "k is invalid !";
+  return number;
 };
 
-console.log(shiftNumber(12345, 8));
+console.log(shiftNumber(123456789, 4));
 
 // -------------------------------- Question 6 --------------------------------
 
 const factors = (n) => {
-  const arr = [];
   for (let i = 2; i <= n / 2; i++) {
     if (n % i == 0) {
       let flag = true;
@@ -101,11 +94,10 @@ const factors = (n) => {
         }
       }
       if (flag) {
-        arr.push(i);
+        console.log(i);
       }
     }
   }
-  return arr;
 };
 
 // console.log(factors(1440));
