@@ -65,21 +65,32 @@ const reverseNumber = (num) => {
 // -------------------------------- Question 5 --------------------------------
 
 const shiftNumber = (number, k) => {
-  // let sifted = 
-  
-  if (k >= 0) {
-    while (k > 0){
-      number = number*10;
-      number = number%(Math.pow(10,Math.floor(Math.log10(number)))) + Math.floor(number/(Math.pow(10,Math.floor(Math.log10(number)))));
-      k--;
-    }
-  } else {
-    console.log(`no`);
+  let num = number;
+  let count = 0;
+  let div =1;
+  let mul =1;
+  while (num) {
+    count++;
+    num = Math.floor(num/10);
   }
-  return number;
+  k = k%count;
+  if (k<0) {
+    k += count
+  }  
+  for (let i = 1; i <= count; i++) {
+    if (i<=k) {
+      div *= 10;
+    }else{
+      mul *= 10;
+    }
+  }
+  let q = Math.floor(number/div);
+  let r = number%div;
+
+  return (r*mul+q);
 };
 
-console.log(shiftNumber(123456789, 4));
+console.log(shiftNumber(12345, 4));
 
 // -------------------------------- Question 6 --------------------------------
 
