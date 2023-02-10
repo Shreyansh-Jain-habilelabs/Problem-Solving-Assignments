@@ -1,5 +1,20 @@
-const removeNthIndex = (array, n) => array.filter((index) => index !== n);
+const removeElement = (array,index) => {
+  arrayLength = array.length;
+  try {
+    if (index>arrayLength || index<0) {
+      return (`Index input is Invalid!`);
+    }
+    for (let i = index; i < arrayLength; i++) {
+       array[i] = array[i+1];
+    }
+    array.length--;
+    return array;
+  } catch (error) {
+    console.log(`${error}`);
+  }
+}
 
-const inputArray = [1, 2, 3, 4, 5];
+const array = [1,2,3,4,5,6,7,7,5,4,3,2];
+const index = 5;
 
-console.log(removeNthIndex(inputArray, 2));
+console.log(removeElement(array,index));

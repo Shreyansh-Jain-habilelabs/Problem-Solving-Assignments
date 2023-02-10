@@ -1,19 +1,24 @@
-function countOccurence(arr) {
-  const result = {};
-  for (let i = 0; i < arr.length; i++) {
-    if (typeof arr[i] === "number") {
-      let digit = arr[i].toString();
-      if (result[digit] === undefined) {
-        result[digit] = 1;
-      } else {
-        result[digit]++;
+const countOccurence = (arr) => {
+  arr.sort((a,b)=> a-b);
+  const arrayLength = arr.length;
+  let occuringElement = arr[0];
+  let elementCount = 0;
+  const occurence = {};
+  if (arrayLength>0) {
+    for (let i = 0; i < arrayLength; i++) {
+      if (arr[i] === occuringElement) {
+        elementCount++;
+        occurence[arr[i]] = elementCount;
+      }else{
+        elementCount = 1;
+        occuringElement = arr[i];
+        occurence[arr[i]] = elementCount;
       }
-    }else{
-      console.log(`is not a number`);
-      return false;
     }
+  }else{
+    return (`invalid array size.`);
   }
-  return result;
+  return occurence;
 }
 
 const arr = [1, 1, 1, 2, 3, "4", 5, 6, 6];

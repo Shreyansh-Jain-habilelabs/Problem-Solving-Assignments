@@ -1,4 +1,4 @@
-function moveZeros(array) {
+const moveZeros = (array) => {
   let zeroPointer = 0;
   arrayLength = array.length;
   for (i in array) {
@@ -15,6 +15,7 @@ function moveZeros(array) {
   }
   return array;
 }
-const array = [0,1,2,0,3,4,0,5,6,7,0,8,0];
+
+const array = [0,0,0,8,0];
 
 console.log(moveZeros(array));
