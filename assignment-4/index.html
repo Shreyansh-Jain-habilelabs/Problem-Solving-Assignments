@@ -1,0 +1,39 @@
+<!-- o'th funct => password vaidalte for hex code -->
+<!-- first funct => make hex code -->
+<!-- third funct => store the hex code -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hex Code Generator</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+<body>
+  
+  <div class="containerBox">
+
+    <form action="#" onsubmit="checkAndGenerateHashCode(event)">
+      <input id="username" type="text" placeholder="Username">
+      <input id="password" type="text" placeholder="Password">
+      <input type="submit" value="Submit">
+    </form>
+
+  </div>
+
+  <div class="customAlert" >
+    <div class="myAlert">
+      <h1>Alert !!</h1>
+      <p>Lenght must be minimum 8 characters long !!</p>
+      <button onclick="hideAgain()">Ok</button>
+    </div>  
+  </div>
+
+  <script src="/js/index.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</body>
+</html>

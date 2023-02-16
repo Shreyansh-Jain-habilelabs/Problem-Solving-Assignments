@@ -35,19 +35,25 @@ const countElementFrequency = (string) => {
 
 let string = "shreyanshJain";
 // console.log(countElementFrequency(string));
+
 // -------------------------------------- Ques 2 --------------------------------------
 
 // ------------------- Layman Apporach --------- find optimal approach---------- remove duplicate from array
 let array = [1,3,3,5,5,5,7];
-
-for (let i = 0; i < array.length; i++) {
-  for (let j = i+1; j < array.length; j++) {
-    if (array[i] === array[j]) {
-      console.log(`i:${i} , j:${j}`);
-      array.splice(j,1);
-    }
+array = array.sort((a,b)=>a-b);
+// array.forEach((value,index)=>{
+//   if (array[index] ===  array[index+1]) {
+//     array.splice(index+1,1);
+//   }
+// })
+let i = 0;
+let j = 0;
+while (i < array.length) {
+  if (array[i] == array) {
+    
   }
 }
+
 
 console.log(array);
 
